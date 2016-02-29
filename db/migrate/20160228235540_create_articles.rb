@@ -8,7 +8,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string "comment", :limit => 255
       t.string "indexes", :limit => 255
       t.text "link", :null => false
-      t.boolean "applied", :default => 0
+      t.boolean "applied", :default => false
       t.integer "amount", :default => 0
 
       t.timestamps null: false
