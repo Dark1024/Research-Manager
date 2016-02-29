@@ -5,7 +5,6 @@ class CreateConferences < ActiveRecord::Migration
       t.string "place", :limit => 150, :null => false
       t.string "sponsor", :limit => 50, :null => false
       t.datetime "date", :null => false
-      t.timestamps null: false
     end
   end
 end
