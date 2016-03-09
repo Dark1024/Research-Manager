@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @conference.name %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @conference.place %>
+</p>
+
+<p>
+  <strong>Sponsor:</strong>
+  <%= @conference.sponsor %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @conference.date %>
+</p>
+
+<%= link_to 'Edit', edit_conference_path(@conference) %> |
+<%= link_to 'Back', conferences_path %>

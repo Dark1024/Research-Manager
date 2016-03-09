@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :articles
+  resources :conferences
+  resources :journals
+  resources :states
+  resources :researches
+  resources :researchers
+  resources :faculties
+  resources :universities
   root 'page#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
