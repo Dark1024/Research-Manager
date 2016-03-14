@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @state.name %>
-</p>
-
-<%= link_to 'Edit', edit_state_path(@state) %> |
-<%= link_to 'Back', states_path %>
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Name:</label>
+    <div class="">
+      <%= @state.name %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_state_path(@state) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', states_path %></button>
+</div>

@@ -1,0 +1,28 @@
+<%= form_for(@assignment) do |f| %>
+  <% if @assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% @assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>Research:</label>
+    <%= f.collection_select(:research_id, @researches, :id, :title) %>
+  </div>
+  <div class="field">
+    <label>Researcher:</label>
+    <%= f.collection_select(:researcher_id, @researchers, :id, :name) %>
+  </div>
+  <div class="field">
+    <label>Type:</label>
+    <%= f.collection_select(:type_id, @types, :id, :name) %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

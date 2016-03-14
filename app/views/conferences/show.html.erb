@@ -1,24 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @conference.name %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @conference.place %>
-</p>
-
-<p>
-  <strong>Sponsor:</strong>
-  <%= @conference.sponsor %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @conference.date %>
-</p>
-
-<%= link_to 'Edit', edit_conference_path(@conference) %> |
-<%= link_to 'Back', conferences_path %>
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Name:</label>
+    <div class="">
+      <%= @conference.name %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Place:</label>
+    <div class="">
+      <%= @conference.place %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Sponsor:</label>
+    <div class="">
+      <%= @conference.sponsor %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Date:</label>
+    <div class="">
+      <%= @conference.date %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_conference_path(@conference) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', conferences_path %></button>
+</div>

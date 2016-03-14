@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Name:</label>
+    <div class="">
+      <%= @type.name %>
+    </div>
+  </div>
+  
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_type_path(@type) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', types_path %></button>
+</div>

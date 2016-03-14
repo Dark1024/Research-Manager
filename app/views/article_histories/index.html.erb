@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h3>Listing Article History</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Article</th>
+        <th>State</th>
+        <th>Deadline</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @article_histories.each do |article_history| %>
+        <tr>
+          <td><%= article_history.article.name %></td>
+          <td><%= article_history.state.name %></td>
+          <td><%= article_history.deadline %></td>
+          <td><%= link_to 'Show', article_history %></td>
+          <td><%= link_to 'Edit', edit_article_history_path(article_history) %></td>
+          <td><%= link_to 'Destroy', article_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <button type="button" class="btn btn-default">
+    <%= link_to 'New Article history', new_article_history_path %>
+  </button>
+</div>

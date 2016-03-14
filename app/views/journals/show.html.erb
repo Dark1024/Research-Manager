@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @journal.name %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @journal.company %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @journal.link %>
-</p>
-
-<%= link_to 'Edit', edit_journal_path(@journal) %> |
-<%= link_to 'Back', journals_path %>
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Name:</label>
+    <div class="">
+      <%= @journal.name %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Company:</label>
+    <div class="">
+      <%= @journal.company %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Link:</label>
+    <div class="">
+      <%= @journal.link %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_journal_path(@journal) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', journals_path %></button>
+</div>

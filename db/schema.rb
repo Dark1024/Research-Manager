@@ -11,21 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304091343) do
+ActiveRecord::Schema.define(version: 20160314152303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "article_histories", force: :cascade do |t|
+    t.integer  "article_id"
+    t.integer  "state_id"
+    t.datetime "deadline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "articles", force: :cascade do |t|
     t.string   "name"
-    t.datetime "deadline"
+    t.integer  "research_id"
     t.string   "commet"
     t.string   "indexes"
     t.text     "link"
     t.boolean  "applied"
     t.integer  "ammount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "research_id"
+    t.integer  "researcher_id"
+    t.integer  "type_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "conferences", force: :cascade do |t|
@@ -59,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160304091343) do
     t.string   "email"
     t.integer  "phone"
     t.integer  "office_phone"
+    t.integer  "faculty_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -66,11 +83,26 @@ ActiveRecord::Schema.define(version: 20160304091343) do
   create_table "researches", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
+    t.integer  "faculty_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "states", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "texts", force: :cascade do |t|
+    t.integer  "researcher_id"
+    t.integer  "article_id"
+    t.integer  "author_number"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

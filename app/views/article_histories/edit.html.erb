@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Editing Article History</div>
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+    </div>
+    <button type="button" class="btn btn-default">
+     <%= link_to 'Show', @article_history %> 
+    </button>
+    <button type="button" class="btn btn-default">
+      <%= link_to 'Back', article_histories_path %>
+    </button>
+  </div>
+</div>

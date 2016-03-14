@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline %>
+    <label>Research:</label>
+    <%= f.collection_select(:research_id, @researches, :id, :title) %>
   </div>
   <div class="field">
     <%= f.label :commet %><br>

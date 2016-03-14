@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :article_histories
+  resources :texts
+  resources :assignments
+  resources :types
   resources :articles
   resources :conferences
   resources :journals

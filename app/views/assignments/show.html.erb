@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Research:</label>
+    <div class="">
+      <%= @assignment.research.title  %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Researcher:</label>
+    <div class="">
+      <%= @assignment.researcher.name %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Type:</label>
+    <div class="">
+      <%= @assignment.type.name %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_assignment_path(@assignment) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', assignments_path %></button>
+</div>

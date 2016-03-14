@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_id: 1
+  researcher_id: 1
+  type_id: 1
+
+two:
+  research_id: 1
+  researcher_id: 1
+  type_id: 1

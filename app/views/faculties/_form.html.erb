@@ -20,9 +20,10 @@
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :university_id %><br>
-    <%= f.number_field :university_id %>
+    <label>University:</label>
+    <%= f.collection_select(:university_id, @universities, :id, :name) %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

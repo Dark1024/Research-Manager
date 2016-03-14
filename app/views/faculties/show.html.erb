@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @faculty.name %>
-</p>
+<div class="container">
+  <div class="form-group">
+    <label class="control-label">Name:</label>
+    <div class="">
+      <%= @faculty.name %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Description:</label>
+    <div class="">
+      <%= @faculty.description %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label">University:</label>
+    <div class="">
+      <%= @faculty.university.name %>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_faculty_path(@faculty) %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'Back', faculties_path %></button>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @faculty.description %>
-</p>
-
-<p>
-  <strong>University:</strong>
-  <%= @faculty.university_id %>
-</p>
-
-<%= link_to 'Edit', edit_faculty_path(@faculty) %> |
-<%= link_to 'Back', faculties_path %>

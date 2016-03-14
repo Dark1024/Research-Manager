@@ -15,10 +15,13 @@ class ResearchersController < ApplicationController
   # GET /researchers/new
   def new
     @researcher = Researcher.new
+
+    @faculties = Faculty.all
   end
 
   # GET /researchers/1/edit
   def edit
+    @faculties = Faculty.all
   end
 
   # POST /researchers
@@ -69,6 +72,6 @@ class ResearchersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def researcher_params
-      params.require(:researcher).permit(:first_name, :last_name, :email, :phone, :office_phone)
+      params.require(:researcher).permit(:first_name, :last_name, :email, :phone, :office_phone, :faculty_id)
     end
 end

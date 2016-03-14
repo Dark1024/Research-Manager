@@ -2,7 +2,7 @@ class CreateArticles < ActiveRecord::Migration
   def change
     create_table :articles do |t|
       t.string :name
-      t.datetime :deadline
+      t.belongs_to :research
       t.string :commet
       t.string :indexes
       t.text :link

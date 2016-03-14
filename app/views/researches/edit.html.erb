@@ -1,6 +1,16 @@
-<h1>Editing Research</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @research %> |
-<%= link_to 'Back', researches_path %>
+<div class="container">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Editing Research</div>
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+    </div>
+    <button type="button" class="btn btn-default">
+      <%= link_to 'Show', @research %>
+    </button>
+    <button type="button" class="btn btn-default">
+      <%= link_to 'Back', researches_path %>
+    </button>
+  </div>
+</div>

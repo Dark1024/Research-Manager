@@ -31,6 +31,10 @@
     <%= f.label :office_phone %><br>
     <%= f.number_field :office_phone %>
   </div>
+   <div class="field">
+    <label>Faculty:</label>
+    <%= f.collection_select(:faculty_id, @faculties, :id, :name) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

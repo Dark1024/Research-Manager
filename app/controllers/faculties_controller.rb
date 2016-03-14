@@ -15,10 +15,13 @@ class FacultiesController < ApplicationController
   # GET /faculties/new
   def new
     @faculty = Faculty.new
+
+    @universities = University.all
   end
 
   # GET /faculties/1/edit
   def edit
+    @universities = University.all
   end
 
   # POST /faculties
